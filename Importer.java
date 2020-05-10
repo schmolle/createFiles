@@ -18,7 +18,7 @@ public class Importer {
 				System.out.println("Dir: " + file.getName());
 				parseFiles(file.listFiles(), parser,writePath);
 			} else {
-				if (file.getName().endsWith(".xml")) { // info zu xml files ausgeben und parsen
+				if (file.getName().endsWith(".xml")) { 
 					System.out.println("File: " + file.getName());
 					System.out.println("File Size: " + file.length() + "\n");
 					parser.parse(file,writePath);
