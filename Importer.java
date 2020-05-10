@@ -12,7 +12,7 @@ public class Importer {
 
 	}
 
-	public void parseFiles(File[] files, Parser parser,String writePath) {
+	public void importFiles(File[] files, Parser parser,String writePath) {
 		for (File file : files) {
 			if (file.isDirectory()) { // ist file ein directory wird dessen inhalt untersucht
 				parseFiles(file.listFiles(), parser,writePath);
