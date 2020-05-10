@@ -15,12 +15,9 @@ public class Importer {
 	public void parseFiles(File[] files, Parser parser,String writePath) {
 		for (File file : files) {
 			if (file.isDirectory()) { // ist file ein directory wird dessen inhalt untersucht
-				System.out.println("Dir: " + file.getName());
 				parseFiles(file.listFiles(), parser,writePath);
 			} else {
-				if (file.getName().endsWith(".xml")) { 
-					System.out.println("File: " + file.getName());
-					System.out.println("File Size: " + file.length() + "\n");
+				if (file.getName().endsWith(".xml")) { // ist file xml weiter zu parser
 					parser.parse(file,writePath);
 				}
 			}
